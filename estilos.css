@@ -11,25 +11,42 @@ body {
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
 }
 
 /*Color para hipervinculos*/
 a {
-    color: blue;
+    color: black;
     text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
  a:hover, a:focus {
-    Color: darkblue;
+    Color: blue;
     text-decoration: dotted;
     text-decoration: underline;
 }
 
-i:hover, i:focus {
-    color: darkblue;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+a.editar {
+    display: flex;
+    order: 1;
+    
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }
 
 /* Redes Sociales */
+
 .fa:hover {
     opacity: 0.9;
 }
@@ -50,20 +67,86 @@ i:hover, i:focus {
 }
 
 .fa {
-    padding: 20px;
-    font-size: 40px;
-    width: 60px;
+    padding: 5px;
+    font-size: 10px;
+    width: 20px;
     text-decoration: none;
-    margin: 5px 80px;
+    margin: 10px;
 }
 
 /*Separador de Contenido*/
+
 hr {
-    margin: 20px 0;
+    width: 105%;
 }
 
+/* Contendor */
 .container {
     width: 95%;
+    height: 95%;
     display: flexbox;
 }
+
+/* Encabezado */
+.encabezado {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Barra de Navegacion Izquierda */
+.encabezado .nav__left {
+    align-items: left;  
+}
+.encabezado .nav__left span{
+    color: white;
+}
+.encabezado .nav__left img {
+    width: 6rem;
+    vertical-align: middle;
+}
+
+/* Barra de Nvegacion Dcha */
+
+ul{
+    list-style: none;
+    display: flex;
+    padding: 5px;
+}
+
+.encabezado .nav__right {
+    align-items: right;
+}
+
+.encabezado .nav__right i {
+    margin: 10px;
+    color: white;
+    vertical-align: middle;
+}
+
+/* Banner */
+
+.banner .informacion{
+    margin: 5px;
+    padding: 1px;
+    text-align: justify;
+    align-items: center;
+}
+
+.banner .principal img {
+    width:105%;
+    height: 300px;
+}
+
+.banner .secundaria img {
+    position: relative;
+    margin-top: -15%;
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Acerca de mi */
+
+
 
