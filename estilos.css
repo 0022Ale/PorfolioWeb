@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 * {
@@ -332,3 +333,302 @@ tbody tr:hover{
       width: 0%;
     }
   }  
+=======
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+/*Separador de Contenido*/
+
+hr {
+    width: 100%;
+}
+
+/*Color para hipervinculos*/
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ a:hover, a:focus {
+    Color: blue;
+    text-decoration: dotted;
+    text-decoration: underline;
+}
+
+h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+    
+h2:hover, h2:focus{
+    color: blueviolet;
+    text-decoration: underline;
+    text-transform:uppercase;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.editar {
+    width: 30px;
+    min-width: 30%;
+    max-width: 30%;
+    opacity: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.banner .informacion .editar {
+    width: 80%;
+    min-width: 60%;
+    max-width: 60%;
+}
+
+/* Redes Sociales */
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-twitter {
+    background: lightskyblue;
+    color: white;
+}
+
+.fa-facebook {
+    background: blue;
+    color: white;
+}
+
+.fa {
+    padding: 5px;
+    font-size: 10px;
+    width: 20px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Contendor */
+.container {
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flexbox;
+    text-align: justify;
+}
+
+/* Encabezado */
+.encabezado {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Barra de Navegacion Izquierda */
+.encabezado .nav__left {
+    align-items: left;  
+}
+.encabezado .nav__left span{
+    color: white;
+}
+.encabezado .nav__left img {
+    width: 6rem;
+    vertical-align: middle;
+}
+
+/* Barra de Navegacion Dcha */
+
+ul{
+    list-style: none;
+    display: flex;
+    padding: 5px;
+}
+
+.encabezado .nav__right {
+    align-items: right;
+}
+
+.encabezado .nav__right i {
+    margin: 10px;
+    color: white;
+    vertical-align: middle;
+}
+
+/* Banner */
+
+.banner .informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    justify-content:space-between;
+}
+
+.banner .principal img {
+    width:100%;
+    height: 300px;
+}
+
+.banner .informacion{
+    display: grid;
+    width: 60%;
+    justify-content: start;
+    align-items: baseline;
+    justify-items: stretch;
+    align-content: stretch;
+}
+
+.banner .secundaria img {
+    position: relative;
+    margin-top: -15%;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.estudios{
+    display: grid;
+    margin: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding-bottom: 20px;
+    border: solid;
+}
+
+.idiomas {
+    display: grid;
+    margin: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding-bottom: 20px;
+    border: solid;
+    text-align: justify;
+}
+
+
+.educacion .descripcion {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.educacion .logoed {
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Habilidades */
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 2em;
+    padding-bottom: 20px;
+  }
+
+.habilidades .outer-box {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-bottom: 30px;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.habilidades .inner-box {
+    font-size: 15px;
+    text-align:center;
+    white-space: pre-line;
+}
+  
+svg {
+    position: absolute;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 10px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 50;
+    animation: loading 2s linear forwards;
+}
+  
+  @keyframes loading {
+    50% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+/* Mobile */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .encabezado, .container, .footer {
+        width: 95%;
+        font-size: small;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+    .encabezado, .container, .footer {
+        width: 95%;
+        font-size: medium;
+    }
+ }
+
+
+/* Escritorio */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    .encabezado, .container, .footer {
+        width: 95%;
+        font-size: large;
+    }
+}
+
+.footer ul li {
+    display: inline;
+    text-align: center;
+    font-size: normal;   
+    height: 30px;
+    padding: 5% 5%;
+}
+>>>>>>> 2a91d69e90d52101f736e78de01226bd9fd6fdf4
