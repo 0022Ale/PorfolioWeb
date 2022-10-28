@@ -17,7 +17,11 @@ body {
 /*Separador de Contenido*/
 
 hr {
+<<<<<<< HEAD
     margin: 5px;
+=======
+    width: 100%;
+>>>>>>> a4fd1b32277c87cd972d0b597a59240d30c169fa
 }
 
 
@@ -35,12 +39,15 @@ a {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 p{
     padding: 5px;
     font-size: larger;
     font-weight: 500;
 }
 
+=======
+>>>>>>> a4fd1b32277c87cd972d0b597a59240d30c169fa
 h2:hover, h2:focus{
     color: blueviolet;
     text-decoration: underline;
@@ -61,6 +68,7 @@ a.editar {
     display:flex;
     flex-direction: column-reverse;
     align-items: flex-end;
+    justify-content: flex-start;
 }
 
 /* Redes Sociales */
@@ -92,6 +100,19 @@ a.editar {
     margin: 10px;
 }
 
+<<<<<<< HEAD
+=======
+/* Contendor */
+.container {
+    margin: 20px;
+    padding: 20px;
+    width: 95%;
+    height: 95%;
+    display: flexbox;
+    text-align: justify;
+}
+
+>>>>>>> a4fd1b32277c87cd972d0b597a59240d30c169fa
 /* Encabezado */
 .encabezado {
     margin: 5px;
@@ -128,8 +149,15 @@ ul{
     vertical-align: middle;
 }
 
+<<<<<<< HEAD
 /* Contendor */
 .container {
+=======
+/* Banner */
+
+.banner .informacion{
+    text-align: justify;
+>>>>>>> a4fd1b32277c87cd972d0b597a59240d30c169fa
     align-items: center;
     text-align: justify;
 }
@@ -163,6 +191,7 @@ ul{
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
 .banner .info {
   grid-column: 2;
   grid-row: 2;
@@ -181,6 +210,8 @@ ul{
     text-align: right;
 }
 
+=======
+>>>>>>> a4fd1b32277c87cd972d0b597a59240d30c169fa
 
 
 /* table{
