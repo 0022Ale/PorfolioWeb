@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body {
@@ -14,12 +14,19 @@ body {
     font-weight: 600;
 }
 
+/*Separador de Contenido*/
+
+hr {
+    margin: 5px;
+}
+
+
 /*Color para hipervinculos*/
+
 a {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    box-sizing: border-box;
 }
 
  a:hover, a:focus {
@@ -27,6 +34,19 @@ a {
     text-decoration: dotted;
     text-decoration: underline;
 }
+
+p{
+    padding: 5px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+h2:hover, h2:focus{
+    color: blueviolet;
+    text-decoration: underline;
+    text-transform:uppercase;
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -38,9 +58,7 @@ a {
 
 
 a.editar {
-    display: flex;
-    order: 1;
-    
+    display:flex;
     flex-direction: column-reverse;
     align-items: flex-end;
 }
@@ -74,19 +92,6 @@ a.editar {
     margin: 10px;
 }
 
-/*Separador de Contenido*/
-
-hr {
-    width: 105%;
-}
-
-/* Contendor */
-.container {
-    width: 95%;
-    height: 95%;
-    display: flexbox;
-}
-
 /* Encabezado */
 .encabezado {
     margin: 5px;
@@ -95,6 +100,7 @@ hr {
     justify-content: space-between;
     align-items: center;
 }
+
 /* Barra de Navegacion Izquierda */
 .encabezado .nav__left {
     align-items: left;  
@@ -108,45 +114,190 @@ hr {
 }
 
 /* Barra de Nvegacion Dcha */
-
 ul{
     list-style: none;
     display: flex;
     padding: 5px;
 }
-
 .encabezado .nav__right {
     align-items: right;
 }
-
 .encabezado .nav__right i {
     margin: 10px;
     color: white;
     vertical-align: middle;
 }
 
-/* Banner */
-
-.banner .informacion{
-    margin: 5px;
-    padding: 1px;
-    text-align: justify;
+/* Contendor */
+.container {
     align-items: center;
+    text-align: justify;
 }
 
-.banner .principal img {
-    width:105%;
-    height: 300px;
+.principal img {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Banner */
+.primaria img {
+  display: flex;
+  width: 100%;
+}
+
+.banner{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: start;
+  align-items: start;
+}
+
+.banner .secundaria {
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .banner .secundaria img {
-    position: relative;
-    margin-top: -15%;
-    width: 150px;
-    border-radius: 50%;
+  width: 120px;
+  border-radius: 50%;
 }
 
-/* Acerca de mi */
+.banner .info {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+/* Educacion */
+
+.container .educacion img{
+    display: flex;
+    width: 80px;
+    border-radius: 50%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    text-align: right;
+}
 
 
 
+/* table{
+    border: solid 2px; 
+    padding: 20px;
+    margin: 10px;
+    width: max-content;
+}
+
+td{
+    padding-inline: 10px;
+    border: solid 2px;
+}
+
+td:hover{
+    background-color: rgba(127, 67, 184, 0.664);
+} */
+
+table {
+    width: 80%;
+    align-items: center;
+    margin: 50px 50px;
+    padding: 20px;
+    border-spacing: 20px;
+    border-collapse: collapse;
+    border: solid 1px;
+}
+td, th {
+    padding: 2px;
+}
+
+caption{
+    text-align: left;
+    font-size: large;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    padding: 20px;
+}
+
+tbody tr:hover{
+    background-color: #ccc !important;
+    text-transform: uppercase;
+}
+
+/*Formato hard & soft skills*/
+
+  .skills h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+
+  }
+  .hardSkills,
+  .softskills {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .skills .outer-box {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills .inner-box {
+    font-size: small;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: loading 2s linear forwards;
+  }
+
+  @keyframes loading {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+@media screen and (max-width: 1357px) {
+    .formcontainer {
+      width: 95%;
+    }
+    .formcontainer .logincontainer {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .formcontainer .welcome-screen-container {
+      width: 40%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .formcontainer .logincontainer {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .formcontainer .welcome-screen-container {
+      width: 0%;
+    }
+  }  
