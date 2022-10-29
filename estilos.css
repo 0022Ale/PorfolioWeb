@@ -14,13 +14,11 @@ body {
     font-weight: 600;
 }
 
-/*Separador de Contenido*/
+/*estilos generales*/
 
 hr {
     width: 100%;
 }
-
-/*Color para hipervinculos*/
 
 a {
     color: black;
@@ -45,6 +43,11 @@ h2:hover, h2:focus{
     text-transform:uppercase;
 }
 
+.banner, .acercademi, .experiencia, .educacion, .habilidades, .proyectos {
+    border: 2px solid navy;
+    border-radius: 2%;
+}
+
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -55,15 +58,13 @@ h2:hover, h2:focus{
 }
 
 .editar {
-    width: 30px;
-    min-width: 30%;
-    max-width: 30%;
+    position: absolute;
+    min-width: 20%;
+    max-width: 19%;
     opacity: 1;
     text-align: right;
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-end;
-    justify-content: flex-end;
 }
 
 .banner .informacion .editar {
@@ -73,7 +74,6 @@ h2:hover, h2:focus{
 }
 
 /* Redes Sociales */
-
 .fa:hover {
     opacity: 0.9;
 }
@@ -112,7 +112,7 @@ h2:hover, h2:focus{
     text-align: justify;
 }
 
-.acercademi, .experiencia, .educacio, .habilidades, .proyectos {
+.acercademi, .experiencia, .educacion, .habilidades, .proyectos {
     padding-top: 10px;
     padding-bottom: 30px;
 }
@@ -185,49 +185,101 @@ ul{
     border-radius: 50%;
 }
 
+/* Experiencia */
+
+.experiencia ul{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.empresa {
+    padding: 10px;
+    border: 1px solid navy;
+    text-align: center;
+    background-color: rgba(240, 255, 255, 0.5);
+    text-transform:capitalize;
+}
+
+.puesto {
+    padding: 20px;
+    text-align: left;
+    margin-left: 5%;
+    text-decoration: underline;
+    font-weight: bold;;
+}
+
+.descripcion{
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 10px;
+}
+
 /* Educacion */
+
 
 .educacion .descripcion {
     display: grid;
     flex-direction: row;
+    row-gap: 5px;
     flex-wrap: wrap;
-    text-align: left;
+    text-align: justify;
+    margin: 5%;
+    padding: 5%;
+    background-color: rgba(101, 243, 236, 0.562);
+    border-radius: 10px;
 }
 
 .educacion .logoed {
-    padding: 10px;
+    margin: 5%;
+    padding: 5%;
     height: 80px;
     border-radius: 50%;
     object-fit: scale-down;
     text-align: right;
+    background-color: #80cbc3b7;
+    border: 1px solid #fff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .educacion h3, h4{
-    padding: 20px;
-    text-align: justify;
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
     text-transform: uppercase;
 }
 
 .estudios{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 20px auto auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    border: solid hsla(249, 65%, 45%, 0.726);
-    align-content: space-around;
 }
 
 .idiomas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 20PX auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    border: solid hsla(249, 65%, 45%, 0.726);
-    justify-content: center;
 }
 
+.formacion{
+    border: darkcyan;
+    border-style: dotted;
+}   
+
+.idiomas p{
+    margin: 5%;
+    padding: 5%;
+    background-color: rgba(101, 243, 236, 0.562);
+    border-radius: 10px;
+}
 
 /* Habilidades */
 
@@ -237,11 +289,12 @@ ul{
 
 .skills{
     display: grid;
+    margin-left: 15%;
+    margin-right: 15%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 2em;
-    padding-bottom: 20px;
   }
 
 .habilidades .outer-box {
@@ -280,11 +333,16 @@ circle {
     }
   }
 
+/* Proyectos */
 
+.proyectos{
+    margin: 5px;
+    padding: 5px;
+}
 
 
 .footer {
-    padding: 20px;
+    padding: 10px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -292,16 +350,16 @@ circle {
 .nav__footer {
     display: flexbox;
     vertical-align: text-top;
-    font-size: large;   
-    padding: 20px;
+    font-size: medium;   
+    padding: 10px;
 }
 
 .nav__footer a{
     display: inline-flex;
     align-items: center;
     text-align: center;
-    padding: 20px 10px 20px 20px;
-    text-transform: uppercase;
+    padding: 10px 5px 5px 10px;
+    justify-content: center;
 }
 
 
@@ -319,13 +377,12 @@ circle {
     cursor: pointer;
 }
 
-
 .btn:hover {
     background-color: #ccc;
     opacity: .7;
 }
 
-/* formulario de login */
+/* Formulario Login */
 
 .formcontainer {
     position: fixed;
@@ -363,21 +420,22 @@ circle {
     border: solid 1px #eee;
 }
 
-.logincontainer .opciones label, 
-.logincontainer .opciones input, 
-.logincontainer .opciones a {
-    font-size: normal;
+.logincontainer .formulario label, 
+.logincontainer .formulario input, 
+.logincontainer .formulario a {
+    font-size: large;
     justify-content:space-around;
     display: inline-block;
     text-align: center;
-    padding: 20px 20px;
+    margin: 5px;
+    padding: 5px;
 }
 
   /* boton de cierre */
   .cancel{
     position: absolute;
-    right: 140px;
-    top: 50px;
+    right: 17%;
+    top: 7%;
     color: #000;
     font-size: large;
     font-weight: bold;
@@ -386,12 +444,23 @@ circle {
   }
 
   /* animaciones del boton cerrar */
-  .cancel:hover,
-  .cancel:focus {
+  .cancel:hover {
     color: red;
     cursor: pointer;
   }
   
+  /* Boton Enviar */
+
+  .btnlogin{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration:solid hsla(249, 65%, 45%, 0.726);
+    text-align: center;
+    padding: 5px 0px;
+    border: 2px solid hsla(249, 65%, 45%, 0.726);
+  }
 
 /* Mobile */
 @media (min-width: 576px) and (max-width: 767.98px) {
