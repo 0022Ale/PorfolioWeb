@@ -281,30 +281,7 @@ circle {
   }
 
 
-/* Mobile */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .encabezado, .container, .footer {
-        width: 95%;
-        font-size: small;
-    }
-}
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1199.98px) { 
-    .encabezado, .container, .footer {
-        width: 95%;
-        font-size: medium;
-    }
- }
-
-
-/* Escritorio */
-@media (min-width: 1200px) and (max-width: 1399.98px) { 
-    .encabezado, .container, .footer {
-        width: 95%;
-        font-size: large;
-    }
-}
 
 .footer {
     padding: 20px;
@@ -325,4 +302,118 @@ circle {
     text-align: center;
     padding: 20px 10px 20px 20px;
     text-transform: uppercase;
+}
+
+
+/* Login */
+
+/*formato globlal de los botones*/
+
+.btn {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: #ccc;
+    opacity: .7;
+}
+
+/* formulario de login */
+
+.formcontainer {
+    position: fixed;
+    z-index: 1;
+    left: 1em;
+    top: 1em;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow:auto;
+    background-color: hsla(249, 65%, 45%, 0.726); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    display: none;
+}
+
+.formcontainer .logincontainer{
+    background-color:whitesmoke;
+    margin: 10px auto;
+    border: 5px solid hsla(249, 65%, 45%, 0.726);
+    width: 60%;
+    color: rgb(7, 7, 121);
+}
+
+.logincontainer .formulario{
+    display: grid;
+    text-align: left;
+    color: hsl(240, 20%, 70%);
+    font-weight: 900;
+    margin: 10px auto;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px #eee;
+}
+
+.logincontainer .opciones label, 
+.logincontainer .opciones input, 
+.logincontainer .opciones a {
+    font-size: normal;
+    justify-content:space-around;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+  /* boton de cierre */
+  .cancel{
+    position: absolute;
+    right: 140px;
+    top: 50px;
+    color: #000;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+  }
+
+  /* animaciones del boton cerrar */
+  .cancel:hover,
+  .cancel:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+
+/* Mobile */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .encabezado, .container, .footer, .formcontainer {
+        width: 95%;
+        font-size: small;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+    .encabezado, .container, .footer, .formcontainer {
+        width: 95%;
+        font-size: medium;
+    }
+ }
+
+
+/* Escritorio */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    .encabezado, .container, .footer, .formcontainer {
+        width: 95%;
+        font-size: large;
+    }
 }
