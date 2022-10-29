@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.2"
-  }
+  },
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "Mi porfolio Web",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0022Ale/PorfolioWeb.git"
+  },
+  "author": "0022Ale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0022Ale/PorfolioWeb/issues"
+  },
+  "homepage": "https://github.com/0022Ale/PorfolioWeb#readme"
 }
