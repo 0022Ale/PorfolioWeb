@@ -185,6 +185,14 @@ ul{
     border-radius: 50%;
 }
 
+/* Acerca de Mi */
+
+.infomi{
+    padding: 5px;
+    text-align: justify;
+    justify-content: space-between;
+}
+
 /* Experiencia */
 
 .experiencia ul{
