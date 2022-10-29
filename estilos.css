@@ -34,9 +34,9 @@ a {
     text-decoration: underline;
 }
 
-h2{
-    margin-top: 5px;
-    margin-bottom: 5px;
+h2, h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
     
 h2:hover, h2:focus{
@@ -102,6 +102,7 @@ h2:hover, h2:focus{
 }
 
 /* Contendor */
+
 .container {
     margin: 20px;
     padding: 20px;
@@ -109,6 +110,11 @@ h2:hover, h2:focus{
     height: 100%;
     display: flexbox;
     text-align: justify;
+}
+
+.acercademi, .experiencia, .educacio, .habilidades, .proyectos {
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 /* Encabezado */
@@ -133,7 +139,6 @@ h2:hover, h2:focus{
 }
 
 /* Barra de Navegacion Dcha */
-
 ul{
     list-style: none;
     display: flex;
@@ -180,42 +185,55 @@ ul{
     border-radius: 50%;
 }
 
-.estudios{
-    display: grid;
-    margin: 5px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    padding-bottom: 20px;
-    border: solid;
-}
-
-.idiomas {
-    display: grid;
-    margin: 5px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    padding-bottom: 20px;
-    border: solid;
-    text-align: justify;
-}
-
+/* Educacion */
 
 .educacion .descripcion {
     display: grid;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 .educacion .logoed {
+    padding: 10px;
     height: 80px;
     border-radius: 50%;
+    object-fit: scale-down;
+    text-align: right;
 }
 
+.educacion h3, h4{
+    padding: 20px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.estudios{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    border: solid hsla(249, 65%, 45%, 0.726);
+    align-content: space-around;
+}
+
+.idiomas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    border: solid hsla(249, 65%, 45%, 0.726);
+    justify-content: center;
+}
+
+
 /* Habilidades */
+
+.habilidades{
+    align-items: center;
+}
 
 .skills{
     display: grid;
@@ -263,9 +281,121 @@ circle {
   }
 
 
+
+
+.footer {
+    padding: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav__footer {
+    display: flexbox;
+    vertical-align: text-top;
+    font-size: large;   
+    padding: 20px;
+}
+
+.nav__footer a{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px 20px 20px;
+    text-transform: uppercase;
+}
+
+
+/* Login */
+
+/*formato globlal de los botones*/
+
+.btn {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: #ccc;
+    opacity: .7;
+}
+
+/* formulario de login */
+
+.formcontainer {
+    position: fixed;
+    z-index: 1;
+    left: 1em;
+    top: 1em;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow:auto;
+    background-color: hsla(249, 65%, 45%, 0.726); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    display: none;
+}
+
+.formcontainer .logincontainer{
+    background-color:whitesmoke;
+    margin: 10px auto;
+    border: 5px solid hsla(249, 65%, 45%, 0.726);
+    width: 60%;
+    color: rgb(7, 7, 121);
+}
+
+.logincontainer .formulario{
+    display: grid;
+    text-align: left;
+    color: hsl(240, 20%, 70%);
+    font-weight: 900;
+    margin: 10px auto;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px #eee;
+}
+
+.logincontainer .opciones label, 
+.logincontainer .opciones input, 
+.logincontainer .opciones a {
+    font-size: normal;
+    justify-content:space-around;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+  /* boton de cierre */
+  .cancel{
+    position: absolute;
+    right: 140px;
+    top: 50px;
+    color: #000;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+  }
+
+  /* animaciones del boton cerrar */
+  .cancel:hover,
+  .cancel:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+
 /* Mobile */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .encabezado, .container, .footer {
+    .encabezado, .container, .footer, .formcontainer {
         width: 95%;
         font-size: small;
     }
@@ -273,7 +403,7 @@ circle {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1199.98px) { 
-    .encabezado, .container, .footer {
+    .encabezado, .container, .footer, .formcontainer {
         width: 95%;
         font-size: medium;
     }
@@ -282,16 +412,8 @@ circle {
 
 /* Escritorio */
 @media (min-width: 1200px) and (max-width: 1399.98px) { 
-    .encabezado, .container, .footer {
+    .encabezado, .container, .footer, .formcontainer {
         width: 95%;
         font-size: large;
     }
-}
-
-.footer ul li {
-    display: inline;
-    text-align: center;
-    font-size: normal;   
-    height: 30px;
-    padding: 5% 5%;
 }
